@@ -65,7 +65,7 @@ public abstract class AbstractRootAliasIntegrationTest extends ITestBase {
 		waitForServletListener();
 	}
 
-	private ServiceRegistration<Servlet> registerServletWhiteBoard(final String path) throws ServletException {
+	private ServiceRegistration<Servlet> registerServletWhiteBoard(final String path) {
 
 		Dictionary<String, String> initParams = new Hashtable<>();
 		initParams.put("alias", path);
@@ -79,7 +79,7 @@ public abstract class AbstractRootAliasIntegrationTest extends ITestBase {
 					private static final long serialVersionUID = -4034428893184634308L;
 
 					@Override
-					protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+					protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 						resp.getOutputStream().write(path.getBytes());
 					}
 				},
@@ -96,7 +96,7 @@ public abstract class AbstractRootAliasIntegrationTest extends ITestBase {
 			private static final long serialVersionUID = 7002851015500239901L;
 
 			@Override
-			protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 				resp.getOutputStream().write(path.getBytes());
 			}
 		}, null, null);
@@ -109,7 +109,7 @@ public abstract class AbstractRootAliasIntegrationTest extends ITestBase {
 	}
 
 	@After
-	public void tearDown() throws BundleException {
+	public void tearDown() {
 		servletRoot.unregister();
 		servletSecond.unregister();
 

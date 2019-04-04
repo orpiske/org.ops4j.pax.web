@@ -35,7 +35,7 @@ public class WhiteboardServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request,
-						 HttpServletResponse response) throws ServletException, IOException {
+						 HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
 		response.setStatus(HttpServletResponse.SC_OK);
 		response.getWriter().println("<h1>Hello Whiteboard Extender</h1>");

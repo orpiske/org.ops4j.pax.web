@@ -33,7 +33,7 @@ public class WhiteboardFilter implements Filter {
 	private static final Logger LOG = LoggerFactory
 			.getLogger(WhiteboardFilter.class);
 
-	public void init(FilterConfig filterConfig) throws ServletException {
+	public void init(FilterConfig filterConfig) {
 		LOG.info("Initialized");
 	}
 

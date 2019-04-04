@@ -30,7 +30,7 @@ public class SharedContext implements HttpContext {
 			.getLogger(SharedContext.class);
 
 	public boolean handleSecurity(final HttpServletRequest request,
-								  final HttpServletResponse response) throws IOException {
+								  final HttpServletResponse response) {
 		LOG.info("Forbiden access!");
 		return false;
 	}

@@ -36,7 +36,7 @@ public class Bundle1Activator implements BundleActivator {
 
 
 	@Override
-	public void start(BundleContext context) throws Exception {
+	public void start(BundleContext context) {
 
 		ServiceReference<WebContainer> serviceReference = context.getServiceReference(WebContainer.class);
 
@@ -79,7 +79,7 @@ public class Bundle1Activator implements BundleActivator {
 	}
 
 	@Override
-	public void stop(BundleContext context) throws Exception {
+	public void stop(BundleContext context) {
 		if (filterReg != null) {
 			filterReg.unregister();
 		}

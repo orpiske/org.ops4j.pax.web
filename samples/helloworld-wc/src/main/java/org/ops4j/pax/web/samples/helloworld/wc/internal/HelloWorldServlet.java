@@ -40,8 +40,8 @@ public class HelloWorldServlet extends HttpServlet {
 	private static final long serialVersionUID = 1633766459629276016L;
 
 	protected void doGet(final HttpServletRequest request,
-						 final HttpServletResponse response) throws ServletException,
-			IOException {
+						 final HttpServletResponse response) throws
+            IOException {
 		/*
 		 * The container DOES NOT create the session if the servlet does not use
 		 * it at least once, so, we do need the line below in order to create

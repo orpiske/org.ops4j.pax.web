@@ -35,11 +35,11 @@ import org.ops4j.pax.web.descriptor.gen.WebAppType;
 public class WebAppParserTest {
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
     }
 
     @SuppressWarnings("deprecation")

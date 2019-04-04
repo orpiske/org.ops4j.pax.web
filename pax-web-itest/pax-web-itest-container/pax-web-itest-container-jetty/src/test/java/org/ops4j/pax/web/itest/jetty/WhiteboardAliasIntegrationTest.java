@@ -57,8 +57,7 @@ public class WhiteboardAliasIntegrationTest extends ITestBase {
 	}
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException,
-			UnavailableException {
+	public void setUp() {
 
 		Dictionary<String, String> initParams = new Hashtable<>();
 		initParams.put("alias", "/");
@@ -70,7 +69,7 @@ public class WhiteboardAliasIntegrationTest extends ITestBase {
 	}
 
 	@After
-	public void tearDown() throws BundleException {
+	public void tearDown() {
 		service.unregister();
 
 	}

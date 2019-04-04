@@ -66,8 +66,7 @@ class HttpServiceStopped implements StoppableHttpService {
 	@Override
 	public void registerServlet(final String alias, final Servlet servlet,
 								@SuppressWarnings("rawtypes") final Dictionary initParams,
-								final HttpContext httpContext) throws ServletException,
-			NamespaceException {
+								final HttpContext httpContext) {
 		LOG.warn("Http service has already been stopped");
 	}
 
@@ -75,14 +74,13 @@ class HttpServiceStopped implements StoppableHttpService {
 	public void registerServlet(String alias, Servlet servlet,
 								@SuppressWarnings("rawtypes") Dictionary initParams,
 								Integer loadOnStartup, Boolean asyncSupported,
-								HttpContext httpContext) throws ServletException,
-			NamespaceException {
+								HttpContext httpContext) {
 		LOG.warn("Http service has already been stopped");
 	}
 
 	@Override
 	public void registerResources(final String alias, final String name,
-								  final HttpContext httpContext) throws NamespaceException {
+								  final HttpContext httpContext) {
 		LOG.warn("Http service has already been stopped");
 	}
 
@@ -117,7 +115,7 @@ class HttpServiceStopped implements StoppableHttpService {
 	@Override
 	public void registerServlet(final Servlet servlet,
 								final String[] urlPatterns, final Dictionary<String, ?> initParams,
-								final HttpContext httpContext) throws ServletException {
+								final HttpContext httpContext) {
 		LOG.warn("Http service has already been stopped");
 	}
 
@@ -131,7 +129,7 @@ class HttpServiceStopped implements StoppableHttpService {
 	public void registerServlet(final Servlet servlet,
 								final String servletName, final String[] urlPatterns,
 								final Dictionary<String, ?> initParams,
-								final HttpContext httpContext) throws ServletException {
+								final HttpContext httpContext) {
 		LOG.warn("Http service has already been stopped");
 	}
 
@@ -166,7 +164,7 @@ class HttpServiceStopped implements StoppableHttpService {
 	@Override
 	public void registerServlet(Class<? extends Servlet> servletClass,
 								String[] urlPatterns, Dictionary<String, ?> initParams,
-								HttpContext httpContext) throws ServletException {
+								HttpContext httpContext) {
 		LOG.warn("Http service has already been stopped");
 	}
 

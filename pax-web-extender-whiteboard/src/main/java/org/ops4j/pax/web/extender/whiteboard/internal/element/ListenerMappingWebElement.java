@@ -102,7 +102,7 @@ public class ListenerMappingWebElement extends WebElement<ListenerMapping> imple
 
 	@Override
 	public void register(final WebContainer webContainer,
-						 final HttpContext httpContext) throws Exception {
+						 final HttpContext httpContext) {
 		webContainer.registerEventListener(listenerMapping.getListener(), httpContext);
 	}
 

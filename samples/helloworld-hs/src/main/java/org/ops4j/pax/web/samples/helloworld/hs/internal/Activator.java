@@ -46,7 +46,7 @@ public final class Activator implements BundleActivator,
 	/**
 	 * Called when the OSGi framework starts our bundle
 	 */
-	public void start(BundleContext bc) throws Exception {
+	public void start(BundleContext bc) {
 		bundleContext = bc;
 		tracker = new ServiceTracker<>(bc,
 				HttpService.class, this);
@@ -56,7 +56,7 @@ public final class Activator implements BundleActivator,
 	/**
 	 * Called when the OSGi framework stops our bundle
 	 */
-	public void stop(BundleContext bc) throws Exception {
+	public void stop(BundleContext bc) {
 		tracker.close();
 	}
 

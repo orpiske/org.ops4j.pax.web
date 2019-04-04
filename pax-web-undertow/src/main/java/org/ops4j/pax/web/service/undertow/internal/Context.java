@@ -181,13 +181,13 @@ public class Context implements LifeCycle, HttpHandler, ResourceManager {
 		}
 	}
 
-	private void doStart(ServletModel servlet) throws ServletException {
+	private void doStart(ServletModel servlet) {
 		withPatterns(servlet.getUrlPatterns(),
 				(pattern, handler) -> path.addPrefixPath(pattern, this),
 				(pattern, handler) -> path.addExactPath(pattern, this));
 	}
 
-	private void doStop(ServletModel servlet) throws ServletException {
+	private void doStop(ServletModel servlet) {
 		withPatterns(servlet.getUrlPatterns(),
 				(pattern, handler) -> {
 					// do not try to remove default handler if it's not set by us
@@ -794,7 +794,7 @@ public class Context implements LifeCycle, HttpHandler, ResourceManager {
 	}
 
 	@Override
-	public void close() throws IOException {
+	public void close() {
 
 	}
 
@@ -943,7 +943,7 @@ public class Context implements LifeCycle, HttpHandler, ResourceManager {
 	private class DirectoryResource implements Resource {
 		private final URL url;
 
-		DirectoryResource(URL url) throws IOException {
+		DirectoryResource(URL url) {
 			this.url = url;
 		}
 

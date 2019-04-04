@@ -72,7 +72,7 @@ public class InstanceManager implements org.apache.tomcat.InstanceManager {
 
 	@Override
 	public Object newInstance(Class<?> clazz) throws IllegalAccessException,
-			InvocationTargetException, NamingException, InstantiationException {
+			InvocationTargetException, InstantiationException {
 		Object instance;
 		try {
 			instance = newInstance(clazz.getName());
@@ -142,12 +142,9 @@ public class InstanceManager implements org.apache.tomcat.InstanceManager {
 	 * @param clazz      clazz to populate annotations for
 	 * @param injections map of injections for this class from xml deployment
 	 *                   descriptor
-	 * @throws IllegalAccessException                      if injection target is inaccessible
-	 * @throws java.lang.reflect.InvocationTargetException if injection fails
 	 */
 	protected void populateAnnotationsCache(Class<?> clazz,
-											Map<String, String> injections) throws IllegalAccessException,
-			InvocationTargetException {
+											Map<String, String> injections) {
 
 		while (clazz != null) {
 			List<AnnotationCacheEntry> annotations = null;

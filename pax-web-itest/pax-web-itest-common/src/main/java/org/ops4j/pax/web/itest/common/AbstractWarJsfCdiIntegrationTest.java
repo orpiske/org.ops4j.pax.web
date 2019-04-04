@@ -58,7 +58,7 @@ public abstract class AbstractWarJsfCdiIntegrationTest extends ITestBase {
     }
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         // Pax-CDI started later, because order is important
         String paxCdiVersion = System.getProperty("PaxCdiVersion");
         installAndStartBundle(mavenBundle().groupId("org.ops4j.pax.cdi").artifactId("pax-cdi-api")

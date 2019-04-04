@@ -43,7 +43,7 @@ public class IndexedOsgiResourceLocaterTests {
 	private Bundle resourceBundleTwo;
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		context = mock(BundleContext.class);
 		resourceBundleOne = new BundleBuilder().withBundleId(100).withSymbolicName("resourcebundle-one")
 				.buildWithResources("template.html", "base.css");
@@ -62,7 +62,7 @@ public class IndexedOsgiResourceLocaterTests {
 	}
 
 	@Test
-	public void resourcesAvailable() throws Exception {
+	public void resourcesAvailable() {
 
 		assertThat("Resource doesn't match!", sut.locateResource("template.html"), isBundleResource(resourceBundleOne, "template.html"));
 		assertThat("Resource doesn't match!", sut.locateResource("base.css"), isBundleResource(resourceBundleOne, "base.css"));
@@ -72,7 +72,7 @@ public class IndexedOsgiResourceLocaterTests {
 
 
 	@Test
-	public void resourceOverride() throws Exception {
+	public void resourceOverride() {
 		Bundle overridingBundle = new BundleBuilder().withSymbolicName("resourcebundle-override")
 				.buildWithResources("another.html", "template.html");
 		when(context.getBundle(resourceBundleOne.getBundleId())).thenReturn(resourceBundleOne);
@@ -87,7 +87,7 @@ public class IndexedOsgiResourceLocaterTests {
 	}
 
 	@Test
-	public void resourceOverrideUninstalled() throws Exception {
+	public void resourceOverrideUninstalled() {
 		Bundle overridingBundle = new BundleBuilder().withSymbolicName("resourcebundle-override")
 				.buildWithResources("another.html", "template.html");
 		when(context.getBundle(resourceBundleOne.getBundleId())).thenReturn(resourceBundleOne);

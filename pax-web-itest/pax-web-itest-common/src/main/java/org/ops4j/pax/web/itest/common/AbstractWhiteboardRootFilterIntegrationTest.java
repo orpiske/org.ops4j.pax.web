@@ -39,7 +39,7 @@ public abstract class AbstractWhiteboardRootFilterIntegrationTest extends ITestB
 	private ServiceRegistration<Servlet> service;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initServletListener();
 
 		Dictionary<String, String> initParams = new Hashtable<>();
@@ -51,7 +51,7 @@ public abstract class AbstractWhiteboardRootFilterIntegrationTest extends ITestB
 	}
 
 	@After
-	public void tearDown() throws BundleException {
+	public void tearDown() {
 		service.unregister();
 
 	}

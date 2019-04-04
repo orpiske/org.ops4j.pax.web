@@ -77,8 +77,7 @@ public abstract class AbstractWhiteboardDeregisteringContextIntegrationTest exte
 	}
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException,
-			UnavailableException {
+	public void setUp() {
 		serviceReference = bundleContext
 				.getServiceReference(WebContainer.class);
 
@@ -91,7 +90,7 @@ public abstract class AbstractWhiteboardDeregisteringContextIntegrationTest exte
 	}
 
 	@After
-	public void tearDown() throws BundleException {
+	public void tearDown() {
 		webContainerService = null;
 		if (bundleContext != null) {
 			bundleContext.ungetService(serviceReference);
@@ -100,7 +99,7 @@ public abstract class AbstractWhiteboardDeregisteringContextIntegrationTest exte
 	}
 
 	@Test
-	public void testDeregisterContext() throws Exception {
+	public void testDeregisterContext() {
 		Hashtable<String, String> props = new Hashtable<>();
 		props.put(ExtenderConstants.PROPERTY_HTTP_CONTEXT_ID, "myContext");
 

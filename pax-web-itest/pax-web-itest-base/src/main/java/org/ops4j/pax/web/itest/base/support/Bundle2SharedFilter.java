@@ -37,7 +37,7 @@ public class Bundle2SharedFilter implements Filter {
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(Bundle2SharedFilter.class);
 
-	public void init(FilterConfig filterConfig) throws ServletException {
+	public void init(FilterConfig filterConfig) {
 		LOGGER.info("init({})", filterConfig);
 	}
 

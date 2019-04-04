@@ -59,7 +59,7 @@ public class WebresourcesExtender implements BundleActivator, BundleListener {
 	}
 
 	@Override
-	public void start(BundleContext context) throws Exception {
+	public void start(BundleContext context) {
 		this.bundleContext = context;
 
 		IndexedOsgiResourceLocator indexedRegistryService = new IndexedOsgiResourceLocator(context);
@@ -100,7 +100,7 @@ public class WebresourcesExtender implements BundleActivator, BundleListener {
 	}
 
 	@Override
-	public void stop(BundleContext context) throws Exception {
+	public void stop(BundleContext context) {
 		trackerResourceLocator.close();
 		context.removeBundleListener(this);
 	}

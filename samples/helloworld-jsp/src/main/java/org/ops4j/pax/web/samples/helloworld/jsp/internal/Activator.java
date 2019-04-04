@@ -101,7 +101,7 @@ public final class Activator implements BundleActivator {
 	/**
 	 * Called when the OSGi framework stops our bundle
 	 */
-	public void stop(BundleContext bc) throws Exception {
+	public void stop(BundleContext bc) {
 		if (webContainerRef != null) {
 			bc.ungetService(webContainerRef);
 			webContainerRef = null;

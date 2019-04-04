@@ -34,7 +34,7 @@ public class PaxWebWhiteboardHttpContext implements HttpContext {
     public static final String CONTEXT_ID = "CustomHttpContext";
     
     @Override
-    public boolean handleSecurity(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public boolean handleSecurity(HttpServletRequest request, HttpServletResponse response) {
         return true;
     }
 

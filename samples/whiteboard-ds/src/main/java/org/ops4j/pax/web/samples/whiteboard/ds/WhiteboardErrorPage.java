@@ -38,7 +38,7 @@ import org.osgi.service.http.whiteboard.HttpWhiteboardConstants;
 public class WhiteboardErrorPage extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/plain");
         resp.getWriter().println("Error Servlet, we do have a 404");
     }

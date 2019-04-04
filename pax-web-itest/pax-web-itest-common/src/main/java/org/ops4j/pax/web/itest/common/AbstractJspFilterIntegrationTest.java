@@ -32,7 +32,7 @@ public abstract class AbstractJspFilterIntegrationTest extends ITestBase {
 	private Bundle installWarBundle;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		Thread.sleep(1000);
 		initWebListener();
 		final String bundlePath = "mvn:org.ops4j.pax.web.samples/jsp-filter/"

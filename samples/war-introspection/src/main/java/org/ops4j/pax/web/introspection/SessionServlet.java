@@ -27,7 +27,7 @@ public class SessionServlet extends IntrospectionServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		resp.setContentType("text/plain");
 
 		if ("/login".equals(req.getPathInfo())) {

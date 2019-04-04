@@ -31,9 +31,8 @@ public interface HttpServiceListener {
 	 * Called when an http service becomes available.
 	 *
 	 * @param httpService an http service
-	 * @throws Exception
-	 */
-	void available(HttpService httpService) throws Exception;
+     */
+	void available(HttpService httpService);
 
 	/**
 	 * Called when an http service becomes unavailable.

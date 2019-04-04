@@ -35,9 +35,9 @@ public abstract class WaitCondition {
 		return description;
 	}
 
-	protected abstract boolean isFulfilled() throws Exception;
+	protected abstract boolean isFulfilled();
 
-	public void waitForCondition() throws InterruptedException {
+	public void waitForCondition() {
 		long startTime = System.currentTimeMillis();
 		try {
 			while (!isFulfilled() && System.currentTimeMillis() < startTime + WAIT_TIMEOUT_MILLIS) {

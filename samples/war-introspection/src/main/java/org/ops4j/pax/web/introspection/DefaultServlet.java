@@ -26,7 +26,7 @@ public class DefaultServlet extends IntrospectionServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		resp.setContentType("text/plain");
 		resp.setStatus(HttpServletResponse.SC_OK);
 		resp.getWriter().println("OK: " + req.getParameter("message"));

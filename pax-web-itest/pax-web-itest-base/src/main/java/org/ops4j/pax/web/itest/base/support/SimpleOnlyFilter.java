@@ -28,7 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 public class SimpleOnlyFilter implements Filter {
 
 	@Override
-	public void init(FilterConfig config) throws ServletException {
+	public void init(FilterConfig config) {
 		System.out.println(config.getServletContext().getContextPath());
 	}
 

@@ -40,7 +40,7 @@ import org.osgi.service.http.HttpService;
 public abstract class AbstractCrossServiceIntegrationTest extends ITestBase {
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initWebListener();
 		waitForWebListener();
 	}

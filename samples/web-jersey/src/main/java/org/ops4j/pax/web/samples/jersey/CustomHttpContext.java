@@ -48,7 +48,7 @@ class CustomHttpContext implements HttpContext {
 	}
 
 	@Override
-	public boolean handleSecurity(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public boolean handleSecurity(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession(false);
 		StringBuilder info = new StringBuilder();
 		info.append("\n  Request=").append(request.getClass().getName()).append("\n  Cookies:\n");

@@ -32,7 +32,7 @@ public abstract class AbstractHttpCustomContextIntegrationTest extends ITestBase
 	private Bundle installBundle;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initServletListener();
 		String bundlePath = "mvn:org.ops4j.pax.web.samples/http-custom-context/"
 				+ VersionUtil.getProjectVersion();

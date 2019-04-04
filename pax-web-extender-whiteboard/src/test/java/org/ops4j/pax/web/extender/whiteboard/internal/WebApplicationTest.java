@@ -95,7 +95,7 @@ public class WebApplicationTest {
 	}
 
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() {
 		Mockito.reset(webElement);
 	}
 

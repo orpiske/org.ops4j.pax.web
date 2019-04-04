@@ -214,12 +214,11 @@ class RegisterWebAppVisitorHS implements WebAppVisitor {
 	 * @return class object
 	 * @throws NullArgumentException  if any of the parameters is null
 	 * @throws ClassNotFoundException re-thrown
-	 * @throws IllegalAccessException re-thrown
-	 */
+     */
 	@SuppressWarnings("unchecked")
 	public static <T> Class<? extends T> loadClass(final Class<T> clazz,
 												   final ClassLoader classLoader, final String className)
-			throws ClassNotFoundException, IllegalAccessException {
+			throws ClassNotFoundException {
 		NullArgumentException.validateNotNull(clazz, "Class");
 		NullArgumentException.validateNotNull(classLoader, "ClassLoader");
 		NullArgumentException.validateNotNull(className, "Servlet Class");

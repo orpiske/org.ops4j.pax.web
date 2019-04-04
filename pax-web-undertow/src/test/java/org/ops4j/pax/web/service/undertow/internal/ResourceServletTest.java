@@ -43,7 +43,7 @@ public class ResourceServletTest {
 	}
 
 	private void checkResourceNameSpaceMapping(String context, String alias, String name,
-											   String uri, String expected) throws IOException, ServletException {
+											   String uri, String expected) throws IOException {
 		setUp();
 		// prepare
 		expect(this.context.getContextModel()).andReturn(contextModel).anyTimes();

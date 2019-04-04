@@ -32,7 +32,7 @@ public class SimpleFilter implements Filter {
 	private boolean haveBundleContext;
 
 	@Override
-	public void init(FilterConfig config) throws ServletException {
+	public void init(FilterConfig config) {
 		System.out.println(config.getServletContext().getContextPath());
 		this.filterConfig = config;
 		haveBundleContext = filterConfig.getServletContext().getAttribute(

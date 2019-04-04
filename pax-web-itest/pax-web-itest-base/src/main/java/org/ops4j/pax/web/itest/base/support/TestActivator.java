@@ -42,7 +42,7 @@ public class TestActivator implements BundleActivator {
 	private ServiceRegistration<Filter> filterReg;
 
 	@Override
-	public void start(BundleContext context) throws Exception {
+	public void start(BundleContext context) {
 		Dictionary<String, String> props;
 		// register a filter
 		props = new Hashtable<>();
@@ -54,7 +54,7 @@ public class TestActivator implements BundleActivator {
 	}
 
 	@Override
-	public void stop(BundleContext context) throws Exception {
+	public void stop(BundleContext context) {
 		if (filterReg != null) {
 			filterReg.unregister();
 			filterReg = null;
@@ -63,7 +63,7 @@ public class TestActivator implements BundleActivator {
 
 	public static class WhiteboardFilter implements Filter {
 
-		public void init(FilterConfig filterConfig) throws ServletException {
+		public void init(FilterConfig filterConfig) {
 			LOG.info("Initialized");
 		}
 

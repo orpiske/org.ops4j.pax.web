@@ -90,7 +90,7 @@ public class TomcatResourceServlet extends HttpServlet {
 	}
 
 	@Override
-	public void init() throws ServletException {
+	public void init() {
 	    welcomes = context.findWelcomeFiles();
 	    if (welcomes == null) {
 	        welcomes = new String[]{"index.html", "index.jsp"};
@@ -309,10 +309,8 @@ public class TomcatResourceServlet extends HttpServlet {
 	 *
 	 * @param resource
 	 * @return The path of the matching welcome file in context or null.
-	 * @throws IOException
-	 * @throws MalformedURLException
-	 */
-	private String getWelcomeFile(String pathInContext) throws MalformedURLException, IOException {
+     */
+	private String getWelcomeFile(String pathInContext) {
 
 		if (welcomes == null) {
 			return null;

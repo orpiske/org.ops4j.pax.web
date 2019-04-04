@@ -29,7 +29,7 @@ public class DefaultFilter implements Filter {
 	private FilterConfig config;
 
 	@Override
-	public void init(FilterConfig filterConfig) throws ServletException {
+	public void init(FilterConfig filterConfig) {
 		this.config = filterConfig;
 		Introspection.event(String.format("init: %s", filterConfig.getFilterName()));
 	}

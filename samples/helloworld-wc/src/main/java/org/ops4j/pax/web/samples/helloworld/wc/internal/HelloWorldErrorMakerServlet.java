@@ -40,8 +40,7 @@ public class HelloWorldErrorMakerServlet extends HttpServlet {
 	private static final long serialVersionUID = -8105406020181795765L;
 
 	protected void doGet(final HttpServletRequest request,
-						 final HttpServletResponse response) throws ServletException,
-			IOException {
+						 final HttpServletResponse response) throws ServletException {
 		final String exceptionType = request.getParameter("type");
 		if (exceptionType == null || exceptionType.trim().length() == 0) {
 			throw new IllegalArgumentException(

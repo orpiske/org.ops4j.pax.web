@@ -44,8 +44,8 @@ public class HelloWorldServlet extends HttpServlet {
 	}
 
 	protected void doGet(final HttpServletRequest request,
-						 final HttpServletResponse response) throws ServletException,
-			IOException {
+						 final HttpServletResponse response) throws
+            IOException {
 		response.setContentType("text/html");
 
 		final PrintWriter writer = response.getWriter();

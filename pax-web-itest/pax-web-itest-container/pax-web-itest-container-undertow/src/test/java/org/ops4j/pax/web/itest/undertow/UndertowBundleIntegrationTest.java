@@ -66,7 +66,7 @@ public class UndertowBundleIntegrationTest extends ITestBase {
 	}
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initWebListener();
 		String bundlePath = "mvn:org.ops4j.pax.web.samples/helloworld-hs/"
 				+ VersionUtil.getProjectVersion();
@@ -111,8 +111,7 @@ public class UndertowBundleIntegrationTest extends ITestBase {
 	}
 
 	@Test
-	public void testServletDeRegistration() throws BundleException,
-			ServletException, NamespaceException {
+	public void testServletDeRegistration() throws BundleException {
 
 		if (installWarBundle != null) {
 			installWarBundle.stop();

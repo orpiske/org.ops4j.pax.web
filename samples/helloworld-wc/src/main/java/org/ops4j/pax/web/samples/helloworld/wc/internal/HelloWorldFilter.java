@@ -41,7 +41,7 @@ public class HelloWorldFilter implements Filter {
 
 	private boolean haveBundleContext;
 
-	public void init(final FilterConfig config) throws ServletException {
+	public void init(final FilterConfig config) {
 		filterConfig = config;
 		haveBundleContext = config.getServletContext().getAttribute(
 				"osgi-bundlecontext") != null;

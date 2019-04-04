@@ -204,7 +204,7 @@ public class HttpServiceContext extends StandardContext {
 				resource = AccessController.doPrivileged(
 						new PrivilegedExceptionAction<URL>() {
 							@Override
-							public URL run() throws Exception {
+							public URL run() {
 								return httpContext.getResource(p);
 							}
 						}, accessControllerContext);
@@ -239,7 +239,7 @@ public class HttpServiceContext extends StandardContext {
 					return AccessController.doPrivileged(
 							new PrivilegedExceptionAction<InputStream>() {
 								@Override
-								public InputStream run() throws Exception {
+								public InputStream run() {
 									try {
 										return url.openStream();
 									} catch (IOException e) {
@@ -271,7 +271,7 @@ public class HttpServiceContext extends StandardContext {
 				final Set<String> paths = AccessController.doPrivileged(
 						new PrivilegedExceptionAction<Set<String>>() {
 							@Override
-							public Set<String> run() throws Exception {
+							public Set<String> run() {
 								return ((WebContainerContext) httpContext)
 										.getResourcePaths(path);
 							}

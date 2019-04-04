@@ -191,7 +191,7 @@ public class JspServletWrapper implements Servlet {
 					new Callable<Void>() {
 
 						@Override
-						public Void call() throws Exception {
+						public Void call() {
 							jasperServlet.destroy();
 							return null;
 						}

@@ -174,7 +174,7 @@ public abstract class AbstractTestBase {
 	protected void waitForServer(final String path) throws InterruptedException {
 		new WaitCondition("server") {
 			@Override
-			protected boolean isFulfilled() throws Exception {
+			protected boolean isFulfilled() {
 				try {
 					HttpTestClientFactory.createDefaultTestClient()
 							.withReturnCode(200, 404)
@@ -237,11 +237,11 @@ public abstract class AbstractTestBase {
 		Filter filter = new Filter() {
 
 			@Override
-			public void init(FilterConfig filterConfig) throws ServletException {
+			public void init(FilterConfig filterConfig) {
 			}
 
 			@Override
-			public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+			public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException {
 				PrintWriter writer = response.getWriter();
 				writer.write(fullContent);
 				writer.flush();

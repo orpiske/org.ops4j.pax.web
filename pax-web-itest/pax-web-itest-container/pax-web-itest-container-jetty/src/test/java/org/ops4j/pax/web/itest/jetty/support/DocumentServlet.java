@@ -521,14 +521,13 @@ public class DocumentServlet extends HttpServlet implements ResourceFactory {
 	 */
 	@Override
 	protected void doTrace(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+			throws IOException {
 		resp.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
 	}
 
 	/* ------------------------------------------------------------ */
 	@Override
-	protected void doOptions(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+	protected void doOptions(HttpServletRequest req, HttpServletResponse resp) {
 		resp.setHeader("Allow", "GET,HEAD,POST,OPTIONS");
 	}
 
@@ -546,10 +545,8 @@ public class DocumentServlet extends HttpServlet implements ResourceFactory {
 	 *
 	 * @param pathInContext
 	 * @return The path of the matching welcome file in context or null.
-	 * @throws IOException
-	 * @throws MalformedURLException
 	 */
-	private String getWelcomeFile(String pathInContext) throws IOException {
+	private String getWelcomeFile(String pathInContext) {
 		if (welcomes == null) {
 			return null;
 		}

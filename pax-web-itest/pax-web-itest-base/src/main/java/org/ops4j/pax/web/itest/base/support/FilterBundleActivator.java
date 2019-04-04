@@ -28,7 +28,7 @@ public class FilterBundleActivator implements BundleActivator {
 	private ServiceRegistration<Filter> filterReg;
 
 	@Override
-	public void start(BundleContext context) throws Exception {
+	public void start(BundleContext context) {
 
 		// register a filter
 		Hashtable<String, String> props = new Hashtable<>();
@@ -41,7 +41,7 @@ public class FilterBundleActivator implements BundleActivator {
 	}
 
 	@Override
-	public void stop(BundleContext context) throws Exception {
+	public void stop(BundleContext context) {
 		if (filterReg != null) {
 			filterReg.unregister();
 		}

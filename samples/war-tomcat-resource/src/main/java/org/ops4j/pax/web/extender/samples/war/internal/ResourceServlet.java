@@ -29,7 +29,7 @@ public class ResourceServlet extends HttpServlet {
 
     private static final long serialVersionUID = -9137418274335254420L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String filename = request.getParameter("filename");
         URL resource = request.getServletContext().getResource("/static-content/" + filename);
         if (resource != null) {

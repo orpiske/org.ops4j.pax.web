@@ -45,7 +45,7 @@ public abstract class AbstractWhiteboardRankedFilterIntegrationTest extends ITes
 	private ServiceRegistration<Servlet> service;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initServletListener("/ranked");
 		Dictionary<String, String> initParams = new Hashtable<>();
 		initParams.put("alias", "/ranked");
@@ -55,7 +55,7 @@ public abstract class AbstractWhiteboardRankedFilterIntegrationTest extends ITes
 	}
 
 	@After
-	public void tearDown() throws BundleException {
+	public void tearDown() {
 		service.unregister();
 
 	}
@@ -165,7 +165,7 @@ public abstract class AbstractWhiteboardRankedFilterIntegrationTest extends ITes
 		String rank;
 
 		@Override
-		public void init(FilterConfig filterConfig) throws ServletException {
+		public void init(FilterConfig filterConfig) {
 			rank = filterConfig.getInitParameter(WebContainerConstants.FILTER_RANKING);
 		}
 

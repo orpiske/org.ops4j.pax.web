@@ -82,7 +82,7 @@ public class JaasIdentityManager implements IdentityManager {
 				Subject subject = new Subject();
 				LoginContext loginContext = new LoginContext(realm, subject, new CallbackHandler() {
 					@Override
-					public void handle(Callback[] callbacks) throws IOException, UnsupportedCallbackException {
+					public void handle(Callback[] callbacks) throws UnsupportedCallbackException {
 						for (Callback callback : callbacks) {
 							if (callback instanceof NameCallback) {
 								((NameCallback) callback).setName(id);

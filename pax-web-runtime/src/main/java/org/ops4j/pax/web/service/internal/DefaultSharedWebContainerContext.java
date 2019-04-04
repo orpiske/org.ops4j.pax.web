@@ -112,7 +112,7 @@ public class DefaultSharedWebContainerContext implements
 
 	@Override
 	public boolean handleSecurity(HttpServletRequest arg0,
-								  HttpServletResponse arg1) throws IOException {
+								  HttpServletResponse arg1) {
 		return true;
 	}
 

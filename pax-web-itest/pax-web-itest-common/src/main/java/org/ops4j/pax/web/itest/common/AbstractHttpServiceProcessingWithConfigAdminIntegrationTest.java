@@ -40,7 +40,7 @@ public abstract class AbstractHttpServiceProcessingWithConfigAdminIntegrationTes
 	private ConfigurationAdmin caService;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException, IOException {
+	public void setUp() throws InterruptedException {
 		initServletListener();
 
 		String bundlePath = "mvn:org.ops4j.pax.web.samples/helloworld-hs/" + VersionUtil.getProjectVersion();

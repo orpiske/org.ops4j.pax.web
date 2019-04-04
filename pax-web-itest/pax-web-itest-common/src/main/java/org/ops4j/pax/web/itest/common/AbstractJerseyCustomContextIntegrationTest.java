@@ -31,7 +31,7 @@ public abstract class AbstractJerseyCustomContextIntegrationTest extends ITestBa
 	private Bundle installWarBundle;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		String bundlePath = "mvn:org.ops4j.pax.web.samples/web-jersey/" + VersionUtil.getProjectVersion();
 		initServletListener();
 		installWarBundle = installAndStartBundle(bundlePath);

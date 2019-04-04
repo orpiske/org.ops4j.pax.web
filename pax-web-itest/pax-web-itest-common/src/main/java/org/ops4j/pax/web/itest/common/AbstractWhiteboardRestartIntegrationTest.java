@@ -43,7 +43,7 @@ public abstract class AbstractWhiteboardRestartIntegrationTest extends ITestBase
 	private BundleContext ctx;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initServletListener("jsp");
 		String bundlePath = "mvn:org.ops4j.pax.web.samples/whiteboard/" + VersionUtil.getProjectVersion();
 		installWarBundle = installAndStartBundle(bundlePath);

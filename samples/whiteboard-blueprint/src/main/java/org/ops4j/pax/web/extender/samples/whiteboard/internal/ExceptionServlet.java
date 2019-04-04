@@ -80,7 +80,7 @@ public class ExceptionServlet extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+			throws IOException {
 		String error = req.getParameter("errorCode");
 		if (error != null && error.trim().length() > 0) {
 			int errorCode = -1;

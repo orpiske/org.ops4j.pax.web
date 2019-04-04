@@ -212,8 +212,8 @@ class HttpServiceContext extends ServletContextHandler {
 					ContextClassLoaderUtils.doWithClassLoader(getClassLoader(),
 							new Callable<Void>() {
 								@Override
-								public Void call() throws IOException,
-										ServletException {
+								public Void call() throws
+                                        ServletException {
 									_scontext.setExtendedListenerTypes(true);
 									initializer.onStartup(servletContainerInitializers.get(initializer), _scontext);
 									return null;
@@ -499,7 +499,7 @@ class HttpServiceContext extends ServletContextHandler {
 				resource = AccessController.doPrivileged(
 						new PrivilegedExceptionAction<URL>() {
 							@Override
-							public URL run() throws Exception {
+							public URL run() {
 								return httpContext.getResource(p);
 							}
 						}, accessControllerContext);
@@ -520,7 +520,7 @@ class HttpServiceContext extends ServletContextHandler {
 					return AccessController.doPrivileged(
 							new PrivilegedExceptionAction<InputStream>() {
 								@Override
-								public InputStream run() throws Exception {
+								public InputStream run() {
 									try {
 										return url.openStream();
 									} catch (IOException e) {
@@ -556,7 +556,7 @@ class HttpServiceContext extends ServletContextHandler {
 					final Set<String> paths = AccessController.doPrivileged(
 							new PrivilegedExceptionAction<Set<String>>() {
 								@Override
-								public Set<String> run() throws Exception {
+								public Set<String> run() {
 									return ((WebContainerContext) httpContext)
 											.getResourcePaths(path);
 								}

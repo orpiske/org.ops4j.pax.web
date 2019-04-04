@@ -31,7 +31,7 @@ public abstract class AbstractJspIntegrationTest extends ITestBase {
 	private Bundle installWarBundle;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		/*
 		 * Tomcat will start a default root context. This will not hurt, but if we initialize the 
 		 * ServletListener too early it will detect this startup and will start the test before the

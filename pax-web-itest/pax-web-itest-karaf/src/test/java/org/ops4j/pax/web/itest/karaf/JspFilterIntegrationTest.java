@@ -50,7 +50,7 @@ public class JspFilterIntegrationTest extends KarafBaseTest {
 
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initWebListener();
 		final String bundlePath = "mvn:org.ops4j.pax.web.samples/jsp-filter/"
 				+ VersionUtil.getProjectVersion() + "/war";

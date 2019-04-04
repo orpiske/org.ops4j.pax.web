@@ -42,7 +42,7 @@ public abstract class AbstractWhiteboardDSRestartIntegrationTest extends ITestBa
 	private BundleContext ctx;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initServletListener();
 		String bundlePath = "mvn:org.ops4j.pax.web.samples/whiteboard-ds/" + VersionUtil.getProjectVersion();
 		installWarBundle = installAndStartBundle(bundlePath);

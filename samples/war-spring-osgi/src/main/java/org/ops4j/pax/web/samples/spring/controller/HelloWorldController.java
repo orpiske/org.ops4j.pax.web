@@ -26,7 +26,7 @@ public class HelloWorldController implements Controller {
 
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest request,
-									  HttpServletResponse response) throws Exception {
+									  HttpServletResponse response) {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("helloWorld");
 		String message = "Done! Spring MVC works like a charm! : - ) ";

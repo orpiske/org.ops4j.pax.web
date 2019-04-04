@@ -35,7 +35,7 @@ public abstract class AbstractWebSocketWhiteBoardIntegrationTest extends ITestBa
 	private static final Logger LOG = LoggerFactory.getLogger(AbstractWebSocketWhiteBoardIntegrationTest.class);
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		LOG.info("Setting up test");
 
 		initWebListener();

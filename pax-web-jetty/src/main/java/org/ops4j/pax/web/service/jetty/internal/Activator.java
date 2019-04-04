@@ -72,7 +72,7 @@ public class Activator implements BundleActivator {
 	private ServerControllerFactoryImpl serverControllerFactory;
 
 	@Override
-	public void start(BundleContext bundleContext) throws Exception {
+	public void start(BundleContext bundleContext) {
 		this.bundleContext = bundleContext;
 
 		for (Bundle b : bundleContext.getBundles()) {
@@ -116,7 +116,7 @@ public class Activator implements BundleActivator {
 	}
 
 	@Override
-	public void stop(BundleContext bundleContext) throws Exception {
+	public void stop(BundleContext bundleContext) {
 		try {
 			registration.unregister();
 		} catch (IllegalStateException e) {

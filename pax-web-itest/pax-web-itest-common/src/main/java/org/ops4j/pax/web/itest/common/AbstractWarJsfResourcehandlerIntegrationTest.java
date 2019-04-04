@@ -63,7 +63,7 @@ public class AbstractWarJsfResourcehandlerIntegrationTest extends ITestBase {
 	 * registering a new implementation, this new class must be served.
 	 */
 	@Test
-	public void testServiceOverride() throws Exception {
+	public void testServiceOverride() {
 
 		OsgiResourceLocatorForTest expectedService = new OsgiResourceLocatorForTest();
 		bundleContext.registerService(OsgiResourceLocator.class, new OsgiResourceLocatorForTest(), null);

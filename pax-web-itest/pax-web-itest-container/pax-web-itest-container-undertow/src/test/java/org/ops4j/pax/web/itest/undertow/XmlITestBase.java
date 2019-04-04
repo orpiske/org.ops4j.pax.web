@@ -40,7 +40,7 @@ public class XmlITestBase extends ITestBase {
 	}
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initServletListener();
 		final String bundlePath = "mvn:org.ops4j.pax.web.samples/helloworld-wc/"
 				+ VersionUtil.getProjectVersion();

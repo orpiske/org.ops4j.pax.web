@@ -335,7 +335,7 @@ public class WebEventDispatcher implements WebListener {
 		try {
 			executors.invokeAny(Collections
 					.<Callable<Void>>singleton(new Callable<Void>() {
-						public Void call() throws Exception {
+						public Void call() {
 							listener.webEvent(event);
 							return null;
 						}

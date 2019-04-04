@@ -84,7 +84,7 @@ public class HttpContextProcessing implements ManagedServiceFactory {
 	}
 
 	@Override
-	public void updated(String pid, Dictionary<String, ?> properties) throws ConfigurationException {
+	public void updated(String pid, Dictionary<String, ?> properties) {
 		LOG.info("Updated configuration for pid={}", pid);
 
 		// we're in the context of ConfigurationAdmin UpdateThread, but we should not hold it too long

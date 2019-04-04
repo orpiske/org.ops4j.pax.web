@@ -37,7 +37,7 @@ public class Bundle1Filter implements Filter {
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(Bundle1Filter.class);
 
-	public void init(FilterConfig filterConfig) throws ServletException {
+	public void init(FilterConfig filterConfig) {
 		LOGGER.info("init({})", filterConfig);
 	}
 

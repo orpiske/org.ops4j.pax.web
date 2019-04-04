@@ -56,7 +56,7 @@ public class FilterMappingWebElement extends WebElement<FilterMapping> implement
 	}
 
 	@Override
-	public void register(final WebContainer webContainer, final HttpContext httpContext) throws Exception {
+	public void register(final WebContainer webContainer, final HttpContext httpContext) {
 		//TODO: DispatcherTypes EnumSet !!
 		//--> this might be done by adding those to the initParams as it's interpreted by the whiteboard-extender
 		webContainer.registerFilter(

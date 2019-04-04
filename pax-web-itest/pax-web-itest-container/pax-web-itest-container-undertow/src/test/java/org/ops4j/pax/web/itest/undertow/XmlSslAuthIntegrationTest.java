@@ -35,10 +35,9 @@ public class XmlSslAuthIntegrationTest extends XmlITestBase {
 
 	/**
 	 * Use wrong keystore - no client auth required
-	 * @throws Exception
-	 */
+     */
 	@Test
-	public void testWebContextPath() throws Exception {
+	public void testWebContextPath() {
 		try {
 			HttpTestClientFactory.createDefaultTestClient()
 					.withBundleKeystore("any", "any", "secret1", "secret2")

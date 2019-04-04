@@ -36,7 +36,7 @@ public class Activator implements BundleActivator {
 	private ServiceRegistration<Servlet> servletReg2;
 	private ServiceRegistration<Servlet> servletReg3;
 
-	public void start(final BundleContext bundleContext) throws Exception {
+	public void start(final BundleContext bundleContext) {
 		Dictionary<String, String> props;
 
 		// register the first context
@@ -98,7 +98,7 @@ public class Activator implements BundleActivator {
 				new WhiteboardServlet("/whiteboard4"), props);
 	}
 
-	public void stop(BundleContext bundleContext) throws Exception {
+	public void stop(BundleContext bundleContext) {
 		if (servletReg != null) {
 			servletReg.unregister();
 			servletReg = null;

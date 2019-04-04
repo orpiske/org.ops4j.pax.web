@@ -31,7 +31,7 @@ public abstract class AbstractJspSimpleIntegrationTest extends ITestBase {
 	private Bundle installWarBundle;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initWebListener();
 		String bundlePath = WEB_BUNDLE
 				+ "mvn:org.ops4j.pax.web.samples/war-simple/"

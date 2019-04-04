@@ -55,7 +55,7 @@ public class WhiteboardExtendedIntegrationTest extends ITestBase {
 	}
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initWebListener();
 		String bundlePath = "mvn:org.ops4j.pax.web.samples/whiteboard-extended/"
 				+ VersionUtil.getProjectVersion();

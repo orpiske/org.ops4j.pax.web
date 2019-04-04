@@ -60,7 +60,7 @@ public class WebContainerSecureWithCRLTest extends AbstractWebContainerSecuredIn
 	}
 
 	@Test
-	public void testWebContextPath() throws Exception {
+	public void testWebContextPath() {
 	    try {
 	        HttpTestClientFactory.createDefaultTestClientWithCRL()
 	            .withResponseAssertion("Response must contain '<h1>Hello World</h1>'",

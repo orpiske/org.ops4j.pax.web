@@ -56,7 +56,7 @@ public class HandlerDestructionTest {
 
 	//CHECKSTYLE:OFF
 	@Test
-	public void testHandler() throws Exception {
+	public void testHandler() {
 		ServerModel serverModel = new ServerModel();
 		JettyServerImpl server = new JettyServerImpl(serverModel, null);
 		server.start();
@@ -77,7 +77,7 @@ public class HandlerDestructionTest {
 			}
 
 			public boolean handleSecurity(HttpServletRequest request,
-										  HttpServletResponse response) throws IOException {
+										  HttpServletResponse response) {
 				return false;
 			}
 
@@ -103,37 +103,37 @@ public class HandlerDestructionTest {
 			}
 
 			@Override
-			public void start(int options) throws BundleException {
+			public void start(int options) {
 
 			}
 
 			@Override
-			public void start() throws BundleException {
+			public void start() {
 
 			}
 
 			@Override
-			public void stop(int options) throws BundleException {
+			public void stop(int options) {
 
 			}
 
 			@Override
-			public void stop() throws BundleException {
+			public void stop() {
 
 			}
 
 			@Override
-			public void update(InputStream input) throws BundleException {
+			public void update(InputStream input) {
 
 			}
 
 			@Override
-			public void update() throws BundleException {
+			public void update() {
 
 			}
 
 			@Override
-			public void uninstall() throws BundleException {
+			public void uninstall() {
 
 			}
 
@@ -185,14 +185,12 @@ public class HandlerDestructionTest {
 			}
 
 			@Override
-			public Class<?> loadClass(String name)
-					throws ClassNotFoundException {
+			public Class<?> loadClass(String name) {
 				return null;
 			}
 
 			@Override
-			public Enumeration<URL> getResources(String name)
-					throws IOException {
+			public Enumeration<URL> getResources(String name) {
 				return null;
 			}
 
@@ -267,27 +265,24 @@ public class HandlerDestructionTest {
 
 					@Override
 					public Bundle installBundle(String location,
-												InputStream input) throws BundleException {
+												InputStream input) {
 						return null;
 					}
 
 					@Override
-					public Bundle installBundle(String location)
-							throws BundleException {
+					public Bundle installBundle(String location) {
 						return null;
 					}
 
 					@Override
 					public <S> Collection<ServiceReference<S>> getServiceReferences(
-							Class<S> clazz, String filter)
-							throws InvalidSyntaxException {
+							Class<S> clazz, String filter) {
 						return null;
 					}
 
 					@Override
 					public ServiceReference<?>[] getServiceReferences(
-							String clazz, String filter)
-							throws InvalidSyntaxException {
+							String clazz, String filter) {
 						return null;
 					}
 
@@ -340,21 +335,18 @@ public class HandlerDestructionTest {
 
 					@Override
 					public ServiceReference<?>[] getAllServiceReferences(
-							String clazz, String filter)
-							throws InvalidSyntaxException {
+							String clazz, String filter) {
 						return null;
 					}
 
 					@Override
-					public Filter createFilter(String filter)
-							throws InvalidSyntaxException {
+					public Filter createFilter(String filter) {
 						return null;
 					}
 
 					@Override
 					public void addServiceListener(
-							ServiceListener listener, String filter)
-							throws InvalidSyntaxException {
+							ServiceListener listener, String filter) {
 
 					}
 

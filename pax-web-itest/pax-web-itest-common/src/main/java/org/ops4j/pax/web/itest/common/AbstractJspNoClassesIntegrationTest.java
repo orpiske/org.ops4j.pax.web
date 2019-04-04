@@ -33,7 +33,7 @@ public abstract class AbstractJspNoClassesIntegrationTest extends ITestBase {
 	private Bundle installWarBundle;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initWebListener();
 		String bundlePath = "mvn:org.ops4j.pax.web.samples/helloworld-jsp-noclasses/" + VersionUtil.getProjectVersion();
 		installWarBundle = installAndStartBundle(bundlePath);

@@ -47,7 +47,7 @@ public class Loader {
 
 	/* ------------------------------------------------------------ */
 	public static URL getResource(Class<?> loadClass, String name,
-								  boolean checkParents) throws ClassNotFoundException {
+								  boolean checkParents) {
 		URL url = null;
 		ClassLoader loader = Thread.currentThread().getContextClassLoader();
 		while (url == null && loader != null) {

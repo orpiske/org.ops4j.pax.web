@@ -116,7 +116,7 @@ public class ResourceServlet extends HttpServlet implements ResourceManager {
 	}
 
 	@Override
-	public void close() throws IOException {
+	public void close() {
 
 	}
 

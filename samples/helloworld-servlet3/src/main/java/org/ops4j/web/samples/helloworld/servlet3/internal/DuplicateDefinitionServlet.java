@@ -30,13 +30,13 @@ public class DuplicateDefinitionServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
 	@Override
-	public void init() throws ServletException {
+	public void init() {
 		System.out.println("****** INIT DuplicateDefinitionServlet");
 	}
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws IOException {
 		final PrintWriter writer = response.getWriter();
 		writer.println("<head>");
 		writer.println("<link rel=\"stylesheet\" href=\""

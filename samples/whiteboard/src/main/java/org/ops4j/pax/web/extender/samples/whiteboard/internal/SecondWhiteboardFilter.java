@@ -32,7 +32,7 @@ public class SecondWhiteboardFilter implements Filter {
 	private static final Logger LOG = LoggerFactory
 			.getLogger(SecondWhiteboardFilter.class);
 
-	public void init(FilterConfig filterConfig) throws ServletException {
+	public void init(FilterConfig filterConfig) {
 		LOG.info("Initialized");
 	}
 

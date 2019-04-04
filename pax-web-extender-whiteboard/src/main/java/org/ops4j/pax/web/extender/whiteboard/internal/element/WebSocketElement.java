@@ -45,7 +45,7 @@ public class WebSocketElement extends WebElement {
 	}
 
 	@Override
-	public void register(WebContainer webContainer, HttpContext httpContext) throws Exception {
+	public void register(WebContainer webContainer, HttpContext httpContext) {
 		webContainer.registerWebSocket(mapping.getWebSocket(), httpContext);
 	}
 

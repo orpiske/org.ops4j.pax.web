@@ -31,7 +31,7 @@ public class ExampleServlet extends HttpServlet {
 	private static final long serialVersionUID = -7165328804714580471L;
 
 	protected void doGet(HttpServletRequest request,
-						 HttpServletResponse response) throws ServletException, IOException {
+						 HttpServletResponse response) throws IOException {
 		final PrintWriter writer = response.getWriter();
 		writer.println("<body align='center'>");
 		writer.println("<h1>Hello World</h1>");

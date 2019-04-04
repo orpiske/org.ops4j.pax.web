@@ -64,7 +64,7 @@ public class Activator implements BundleActivator {
 
 	private ServiceRegistration<JspMapping> jspMappingRegistration;
 
-	public void start(final BundleContext bundleContext) throws Exception {
+	public void start(final BundleContext bundleContext) {
 		Dictionary<String, String> props;
 
 		// register a custom http context that forbids access
@@ -203,7 +203,7 @@ public class Activator implements BundleActivator {
 				JspMapping.class, jspMapping, null);
 	}
 
-	public void stop(BundleContext bundleContext) throws Exception {
+	public void stop(BundleContext bundleContext) {
 		if (rootResourceMappingRegistration != null) {
 			rootResourceMappingRegistration.unregister();
 			rootResourceMappingRegistration = null;

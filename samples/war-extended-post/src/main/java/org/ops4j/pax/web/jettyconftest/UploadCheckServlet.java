@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UploadCheckServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.getWriter().println("POST data size is: " + request.getParameter("data").length());
 	}
 }

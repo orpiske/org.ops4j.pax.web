@@ -44,8 +44,7 @@ public class WelcomeFileWebElement extends WebElement<WelcomeFileMapping> implem
 	}
 
 	@Override
-	public void register(WebContainer webContainer, HttpContext httpContext)
-			throws Exception {
+	public void register(WebContainer webContainer, HttpContext httpContext) {
 		webContainer.registerWelcomeFiles(
 				welcomeFileMapping.getWelcomeFiles(),
 				welcomeFileMapping.isRedirect(), httpContext);

@@ -146,7 +146,7 @@ public abstract class AbstractExtender implements BundleActivator,
 		startTracking();
 	}
 
-	protected void doStop() throws Exception {
+	protected void doStop() {
 		stopTracking();
 	}
 
@@ -338,9 +338,8 @@ public abstract class AbstractExtender implements BundleActivator,
 	 *
 	 * @param bundle the bundle to extend
 	 * @return created {@link Extension}
-	 * @throws Exception
 	 */
 	protected abstract Extension doCreateExtension(Bundle bundle)
-			throws Exception;
+	;
 
 }

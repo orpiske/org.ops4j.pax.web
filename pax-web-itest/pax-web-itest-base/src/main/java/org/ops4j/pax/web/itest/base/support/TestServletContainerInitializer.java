@@ -26,7 +26,7 @@ import javax.servlet.ServletException;
  */
 public class TestServletContainerInitializer implements ServletContainerInitializer {
     @Override
-    public void onStartup(Set<Class<?>> c, ServletContext servletContext) throws ServletException {
+    public void onStartup(Set<Class<?>> c, ServletContext servletContext) {
         servletContext.addFilter("initializerFilter", SimpleFilter.class).addMappingForUrlPatterns(null, false, "/*");
     }
 

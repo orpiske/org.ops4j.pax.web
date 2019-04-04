@@ -31,7 +31,7 @@ public abstract class AbstractWebContainerSecuredIntegrationTest extends ITestBa
 	private Bundle installWarBundle;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initWebListener();
 		final String bundlePath = "mvn:org.ops4j.pax.web.samples/helloworld-wc/"
 				+ VersionUtil.getProjectVersion();

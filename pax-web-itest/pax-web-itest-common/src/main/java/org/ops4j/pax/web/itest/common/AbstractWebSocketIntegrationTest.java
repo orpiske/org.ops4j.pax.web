@@ -47,7 +47,7 @@ import org.osgi.framework.BundleException;
 public abstract class AbstractWebSocketIntegrationTest extends ITestBase {
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initWebListener();
 		waitForWebListener();
 	}

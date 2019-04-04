@@ -47,7 +47,7 @@ public class XmlAuthConfigurationIntegrationTest extends XmlITestBase {
 
 	@Before
 	@Override
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		initServletListener();
 		String bundlePath = WEB_BUNDLE
 				+ "mvn:org.ops4j.pax.web.samples/war-authentication/"

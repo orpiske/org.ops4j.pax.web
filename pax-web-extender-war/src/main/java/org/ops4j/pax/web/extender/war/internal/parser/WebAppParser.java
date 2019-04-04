@@ -284,7 +284,7 @@ public class WebAppParser {
 		return majorVersion;
 	}
 
-	private void tldScan(final Bundle bundle, final WebApp webApp) throws Exception {
+	private void tldScan(final Bundle bundle, final WebApp webApp) {
 		// special handling for finding JSF Context listeners wrapped in
 		// *.tld files
 		// FIXME this is not enough to find TLDs from imported bundles or from
@@ -354,7 +354,7 @@ public class WebAppParser {
 		}
 	}
 
-	private List<URL> scanWebFragments(final Bundle bundle, final WebApp webApp) throws Exception {
+	private List<URL> scanWebFragments(final Bundle bundle, final WebApp webApp) {
 		Set<Bundle> bundlesInClassSpace = ClassPathUtil.getBundlesInClassSpace(bundle, new HashSet<>());
 
 		List<URL> webFragments = new ArrayList<>();
@@ -396,7 +396,7 @@ public class WebAppParser {
 		LOG.debug("class scanning done");
 	}
 
-	private void servletContainerInitializerScan(Bundle bundle, WebApp webApp, Integer majorVersion) throws Exception {
+	private void servletContainerInitializerScan(Bundle bundle, WebApp webApp, Integer majorVersion) {
 		LOG.debug("scanning for ServletContainerInitializer");
 
 		SafeServiceLoader safeServiceLoader = new SafeServiceLoader(bundle.adapt(BundleWiring.class).getClassLoader());

@@ -40,7 +40,7 @@ public class Bundle1Servlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+			throws IOException {
 		resp.getWriter().println("Welcome to Bundle1");
 		LOGGER.info("doGet({}, {})", new Object[]{req, resp});
 	}

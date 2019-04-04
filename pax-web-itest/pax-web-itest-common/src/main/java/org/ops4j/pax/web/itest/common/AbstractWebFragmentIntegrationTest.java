@@ -30,7 +30,7 @@ public abstract class AbstractWebFragmentIntegrationTest extends ITestBase {
 	private static final Logger LOG = LoggerFactory.getLogger(AbstractWebFragmentIntegrationTest.class);
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		LOG.info("Setting up test");
 
 		initWebListener();

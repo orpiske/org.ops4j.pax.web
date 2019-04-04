@@ -47,7 +47,7 @@ public final class Activator implements BundleActivator {
 	/**
 	 * Called whenever the OSGi framework stops our bundle
 	 */
-	public void stop(BundleContext bc) throws Exception {
+	public void stop(BundleContext bc) {
 		if (httpService != null) {
 			bc.ungetService(httpServiceRef);
 			httpServiceRef = null;

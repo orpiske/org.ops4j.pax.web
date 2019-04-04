@@ -195,8 +195,7 @@ public class JettyServerWrapperTest {
 	}
 
 	@Test
-	public void registrationAndUnregistrationOfTwoServletsThereShouldBeNoContexts()
-			throws Exception {
+	public void registrationAndUnregistrationOfTwoServletsThereShouldBeNoContexts() {
 		JettyServerImpl server = new JettyServerImpl(serverModelMock, null);
 		server.start();
 		try {

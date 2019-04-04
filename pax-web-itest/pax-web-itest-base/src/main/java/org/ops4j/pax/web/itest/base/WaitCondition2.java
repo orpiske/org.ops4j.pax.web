@@ -29,7 +29,7 @@ public class WaitCondition2 extends WaitCondition {
 	}
 
 	@Override
-	protected boolean isFulfilled() throws Exception {
+	protected boolean isFulfilled() {
 		return isFulfilled.get();
 	}
 }

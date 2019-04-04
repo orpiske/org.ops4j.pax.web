@@ -200,7 +200,7 @@ public class ServletEventDispatcher implements ServletListener, BundleListener {
 			executors.invokeAny(Collections
 					.<Callable<Void>>singleton(new Callable<Void>() {
 						@Override
-						public Void call() throws Exception {
+						public Void call() {
 							listener.servletEvent(event);
 							return null;
 						}

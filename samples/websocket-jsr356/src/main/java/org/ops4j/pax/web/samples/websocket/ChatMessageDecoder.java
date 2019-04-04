@@ -34,7 +34,7 @@ public class ChatMessageDecoder implements Decoder.Text<ChatMessage> {
 	}
 
 	@Override
-	public ChatMessage decode(final String textMessage) throws DecodeException {
+	public ChatMessage decode(final String textMessage) {
 		ChatMessage chatMessage = new ChatMessage();
 		JsonObject obj = Json.createReader(new StringReader(textMessage))
 				.readObject();

@@ -40,11 +40,9 @@ public class AsyncServlet extends HttpServlet {
 	 * 
 	 * @param req
 	 * @param resp
-	 * @throws ServletException
-	 * @throws IOException
 	 */
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
 
 		switch (req.getDispatcherType()) {
 		case REQUEST:

@@ -44,7 +44,7 @@ public abstract class AbstractHttpServiceWithConfigAdminIntegrationTest extends 
 	private ConfigurationAdmin caService;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException, IOException {
+	public void setUp() throws InterruptedException, IOException {
 		org.osgi.service.cm.Configuration config = caService.getConfiguration(WebContainerConstants.PID);
 
 		Dictionary<String, Object> props = new Hashtable<>();

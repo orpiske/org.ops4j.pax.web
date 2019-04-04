@@ -73,7 +73,7 @@ public class HttpServiceIntegrationTest extends AbstractHttpServiceIntegrationTe
 
         new WaitCondition("logfile") {
             @Override
-            protected boolean isFulfilled() throws Exception {
+            protected boolean isFulfilled() {
                 return logFile.exists();
             }
         }.waitForCondition();

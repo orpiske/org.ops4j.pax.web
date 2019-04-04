@@ -33,7 +33,7 @@ public abstract class AbstractWhiteboardResourceIntegrationTest extends ITestBas
 	private ServiceRegistration<ResourceMapping> service;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 		DefaultResourceMapping resourceMapping = new DefaultResourceMapping();
 		resourceMapping.setAlias("/whiteboardresources");
 		resourceMapping.setPath("/images");
@@ -45,7 +45,7 @@ public abstract class AbstractWhiteboardResourceIntegrationTest extends ITestBas
 	}
 
 	@After
-	public void tearDown() throws BundleException {
+	public void tearDown() {
 		service.unregister();
 	}
 

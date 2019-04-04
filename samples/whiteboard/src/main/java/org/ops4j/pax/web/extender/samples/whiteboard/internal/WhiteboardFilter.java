@@ -34,7 +34,7 @@ public class WhiteboardFilter implements Filter {
 			.getLogger(WhiteboardFilter.class);
 	private boolean haveBundleContext;
 
-	public void init(FilterConfig filterConfig) throws ServletException {
+	public void init(FilterConfig filterConfig) {
 		LOG.info("Initialized");
 		haveBundleContext = filterConfig.getServletContext().getAttribute(
 				"osgi-bundlecontext") != null;

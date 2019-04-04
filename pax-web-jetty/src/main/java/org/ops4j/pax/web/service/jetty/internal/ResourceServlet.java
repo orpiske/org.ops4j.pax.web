@@ -88,7 +88,7 @@ class ResourceServlet extends HttpServlet implements ResourceFactory {
 	}
 
 	@Override
-	public void init() throws ServletException {
+	public void init() {
 		ServletContext servletContext = getServletContext();
 		ContextHandler contextHandler = initContextHandler(servletContext);
 		welcomes = contextHandler.getWelcomeFiles();
@@ -374,8 +374,7 @@ class ResourceServlet extends HttpServlet implements ResourceFactory {
 			METHOD = mth;
 		}
 
-		public static Resource newResource(URL url, boolean useCaches)
-				throws IOException {
+		public static Resource newResource(URL url, boolean useCaches) {
 			try {
 				return (Resource) METHOD.invoke(null, url, useCaches);
 				// CHECKSTYLE:OFF

@@ -42,7 +42,7 @@ public abstract class AbstractWhiteboardResourceFilterIntegrationTest extends IT
 	private ServiceRegistration<Servlet> service;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException {
+	public void setUp() throws InterruptedException {
 
 		Dictionary<String, String> initParams = new Hashtable<>();
 		initParams.put("alias", "/test-resources");
@@ -54,7 +54,7 @@ public abstract class AbstractWhiteboardResourceFilterIntegrationTest extends IT
 	}
 
 	@After
-	public void tearDown() throws BundleException {
+	public void tearDown() {
 		service.unregister();
 	}
 

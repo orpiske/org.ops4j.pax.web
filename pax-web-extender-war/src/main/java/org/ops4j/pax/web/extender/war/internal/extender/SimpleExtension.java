@@ -79,8 +79,8 @@ public abstract class SimpleExtension implements Extension {
 		return this;
 	}
 
-	protected abstract void doStart() throws Exception;
+	protected abstract void doStart();
 
-	protected abstract void doDestroy() throws Exception;
+	protected abstract void doDestroy();
 
 }

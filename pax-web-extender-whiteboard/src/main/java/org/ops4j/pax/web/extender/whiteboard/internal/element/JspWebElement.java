@@ -48,7 +48,7 @@ public class JspWebElement extends WebElement<JspMapping> implements WhiteboardJ
 	}
 
 	@Override
-	public void register(final WebContainer webContainer, final HttpContext httpContext) throws Exception {
+	public void register(final WebContainer webContainer, final HttpContext httpContext) {
 		webContainer.registerJsps(
 					jspMapping.getUrlPatterns(),
 					DictionaryUtils.adapt(jspMapping.getInitParams()),

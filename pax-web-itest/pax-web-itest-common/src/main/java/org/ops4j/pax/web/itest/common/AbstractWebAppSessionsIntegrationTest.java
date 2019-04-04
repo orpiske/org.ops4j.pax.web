@@ -45,7 +45,7 @@ public abstract class AbstractWebAppSessionsIntegrationTest extends ITestBase {
 	private ConfigurationAdmin caService;
 
 	@Before
-	public void setUp() throws BundleException, InterruptedException, IOException {
+	public void setUp() throws BundleException, InterruptedException {
 		LOG.info("Setting up test");
 
 		initWebListener();

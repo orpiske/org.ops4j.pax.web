@@ -93,7 +93,7 @@ public class Activator implements BundleActivator {
     private ExtendedHttpServiceRuntime httpServiceRuntime;
 
 	@Override
-	public void start(final BundleContext bundleContext) throws Exception {
+	public void start(final BundleContext bundleContext) {
 		httpServiceRuntime = new ExtendedHttpServiceRuntime(bundleContext);
 		httpServiceRuntime.start();
 		extenderContext = new ExtenderContext(httpServiceRuntime);
@@ -123,7 +123,7 @@ public class Activator implements BundleActivator {
 	}
 
 	@Override
-	public void stop(final BundleContext bundleContext) throws Exception {
+	public void stop(final BundleContext bundleContext) {
 		List<ServiceTracker<?, ?>> serviceTrackers = new ArrayList<>(this.trackers);
 		Collections.reverse(serviceTrackers);
 		for (ServiceTracker<?, ?> tracker : serviceTrackers) {

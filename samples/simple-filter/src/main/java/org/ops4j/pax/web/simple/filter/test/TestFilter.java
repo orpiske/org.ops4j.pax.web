@@ -43,14 +43,14 @@ public class TestFilter implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,
-						 FilterChain chain) throws IOException, ServletException {
+						 FilterChain chain) throws IOException {
 		LOG.debug("TestFilter - doFilter");
 		response.getWriter().write("Filtered");
 		LOG.debug("response altered!");
 	}
 
 	@Override
-	public void init(FilterConfig arg0) throws ServletException {
+	public void init(FilterConfig arg0) {
 		// TODO Auto-generated method stub
 
 	}

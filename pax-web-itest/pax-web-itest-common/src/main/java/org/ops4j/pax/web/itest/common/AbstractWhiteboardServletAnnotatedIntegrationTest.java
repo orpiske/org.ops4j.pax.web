@@ -37,11 +37,11 @@ import org.osgi.framework.ServiceRegistration;
 public abstract class AbstractWhiteboardServletAnnotatedIntegrationTest extends ITestBase {
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 	}
 
 	@After
-	public void tearDown() throws BundleException {
+	public void tearDown() {
 	}
 
 	@Test

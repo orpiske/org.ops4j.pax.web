@@ -1349,7 +1349,7 @@ class HttpServiceStarted implements StoppableHttpService {
 				private Integer maxTry = 20;
 
 				@Override
-				public void onStartup(Set<Class<?>> c, ServletContext ctx) throws ServletException {
+				public void onStartup(Set<Class<?>> c, ServletContext ctx) {
 					Callable<Boolean> task = () -> registerWebSocket(ctx, 1);
 
 					ExecutorService executor = Executors.newSingleThreadExecutor();

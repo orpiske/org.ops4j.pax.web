@@ -65,7 +65,7 @@ public class Activator extends AbstractExtender {
 	}
 
 	@Override
-	protected void doStop() throws Exception {
+	protected void doStop() {
 		logger.debug("Pax Web WAR Extender - Stopping");
 		if (registration != null) {
 			registration.unregister();
@@ -78,7 +78,7 @@ public class Activator extends AbstractExtender {
 	}
 
 	@Override
-	protected Extension doCreateExtension(Bundle bundle) throws Exception {
+	protected Extension doCreateExtension(Bundle bundle) {
 		return webObserver.createExtension(bundle);
 	}
 

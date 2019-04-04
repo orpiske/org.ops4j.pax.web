@@ -46,8 +46,7 @@ public class ErrorPageWebElement extends WebElement<ErrorPageMapping> implements
 	}
 
 	@Override
-	public void register(WebContainer webContainer, HttpContext httpContext)
-			throws Exception {
+	public void register(WebContainer webContainer, HttpContext httpContext) {
 			webContainer.registerErrorPage(
 					errorPageMapping.getError(),
 					errorPageMapping.getLocation(), httpContext);

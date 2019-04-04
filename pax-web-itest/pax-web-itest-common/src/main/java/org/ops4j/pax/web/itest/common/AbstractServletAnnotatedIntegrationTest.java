@@ -37,7 +37,7 @@ public abstract class AbstractServletAnnotatedIntegrationTest extends ITestBase 
 	}
 
 	@After
-	public void tearDown() throws BundleException {
+	public void tearDown() {
 	}
 
 
@@ -51,7 +51,7 @@ public abstract class AbstractServletAnnotatedIntegrationTest extends ITestBase 
 
 	@Test
 	@Ignore("Find a way for multipart-post with jetty-client")
-	public void testMultipart() throws Exception {
+	public void testMultipart() {
 		// TODO Mutipart
 //		Map<String, Object> multiPartContent = new HashMap<String, Object>();
 //		multiPartContent.put("exampleFile", "file.part");
