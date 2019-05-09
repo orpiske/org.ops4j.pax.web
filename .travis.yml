@@ -6,7 +6,7 @@ before_install:
 jobs:
   include:
     - stage: build
-      script: mvn -B -DskipTests clean install dependency:resolve-plugins dependency:go-offline
+      script: mvn --quiet -B -DskipTests clean install dependency:resolve-plugins dependency:go-offline
     - stage: test
     - script: mvn -o -B -P jetty integration-test verify
     - script: mvn -o -B -P undertow integration-test verify
