@@ -8,9 +8,9 @@ jobs:
     - stage: build
       script: mvn --quiet -B -DskipTests clean install dependency:resolve-plugins dependency:go-offline
     - stage: test
-    - script: mvn -o -B -P jetty integration-test verify
-    - script: mvn -o -B -P undertow integration-test verify
-    - script: mvn -B -o -P tomcat integration-test verify
+    - script: mvn -B -P jetty integration-test verify
+    - script: mvn -B -P undertow integration-test verify
+    - script: mvn -B -P tomcat integration-test verify
 jdk:
   - oraclejdk8
 notifications:
