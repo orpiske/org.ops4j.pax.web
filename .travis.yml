@@ -4,6 +4,8 @@ before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
 script: travis_wait mvn --quiet -Ptravis,!load-test clean install
+after_failure: cat /home/travis/build/orpiske/org.ops4j.pax.web/target/web-7.3.4-SNAPSHOT.rat
+  -
 jdk:
   - oraclejdk8
 notifications:
