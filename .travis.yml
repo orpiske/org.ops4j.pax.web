@@ -3,7 +3,14 @@ language: java
 before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-script: travis_wait 80 mvn --quiet -Ptravis,!load-test clean install
+jobs:
+  include:
+    - stage: build
+      script: mvn -B -DskipTests clean install dependency:resolve-plugins dependency:go-offline
+    - stage: test
+    - script: mvn -o -B -P jetty integration-test verify
+    - script: mvn -o -B -P undertow integration-test verify
+    - script: mvn -B -o -P tomcat integration-test verify
 jdk:
   - oraclejdk8
 notifications:
