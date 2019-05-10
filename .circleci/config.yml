@@ -48,7 +48,7 @@ jobs:
         - v1-dep-{{ .Branch }}-
         - v1-dep-master-
         - v1-dep-
-    - run: mvn -o -B -P jetty integration-test verify
+    - run: mvn --quiet -B -DskipTests -P!rat,!code-analysis -Dmaven.javadoc.skip=true install dependency:resolve-plugins dependency:go-offline && mvn -B -P jetty,!undertow,!tomcat,!rat,!code-analysis,!karaf-test -Dmaven.javadoc.skip=true integration-test verify
     - run:
         name: Save test results
         command: |
@@ -84,7 +84,7 @@ jobs:
         - v1-dep-{{ .Branch }}-
         - v1-dep-master-
         - v1-dep-
-    - run: mvn -o -B -P undertow integration-test verify
+    - run: mvn --quiet -B -DskipTests -P!rat,!code-analysis -Dmaven.javadoc.skip=true install dependency:resolve-plugins dependency:go-offline && mvn -B -P undertow,!jetty,!tomcat,!rat,!code-analysis,!karaf-test -Dmaven.javadoc.skip=true integration-test verify
     - run:
         name: Save test results
         command: |
@@ -120,7 +120,7 @@ jobs:
         - v1-dep-master-
         - v1-dep-
     - run:
-        command: mvn -B -o -P tomcat integration-test verify
+        command: mvn --quiet -B -DskipTests -P!rat,!code-analysis -Dmaven.javadoc.skip=true install dependency:resolve-plugins dependency:go-offline && mvn -B -P tomcat,!undertow,!jetty,!rat,!code-analysis,!karaf-test -Dmaven.javadoc.skip=true integration-test verify
         no_output_timeout: 30m
     - run:
         name: Save test results
