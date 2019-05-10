@@ -120,7 +120,7 @@ jobs:
         - v1-dep-master-
         - v1-dep-
     - run:
-        command: mvn --quiet -B -DskipTests -P!rat,!code-analysis -Dmaven.javadoc.skip=true install dependency:resolve-plugins dependency:go-offline && mvn -B -P tomcat,!undertow,!jetty,!rat,!code-analysis,!karaf-test -Dmaven.javadoc.skip=true integration-test verify
+        command:  mvn --quiet -B -DskipTests -P!rat,!code-analysis -Dmaven.javadoc.skip=true install dependency:resolve-plugins dependency:go-offline && mvn -B -P tomcat,!undertow,!jetty,!rat,!code-analysis,!karaf-test -Dmaven.javadoc.skip=true integration-test verify
         no_output_timeout: 30m
     - run:
         name: Save test results
